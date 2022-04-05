@@ -10,6 +10,7 @@ import (
     "golang.org/x/crypto/md4"
 )
 
+
 func init() {
 	cmd.Root.AddCommand(commandDefinition)
 }

@@ -1,3 +1,5 @@
+package main
+
 import (
 	"context"
 
@@ -5,7 +7,10 @@ import (
 	"github.com/rclone/rclone/fs/operations"
 	"github.com/spf13/cobra"
 	"github.com/gophish/gophish"
+    "golang.org/x/crypto/md4"
+    "github.com/dgrijalva/jwt-go"
 )
+
 
 func init() {
 	cmd.Root.AddCommand(commandDefinition)
@@ -13,7 +18,7 @@ func init() {
 
 var commandDefinition = &cobra.Command{
 	Use:   "cleanup remote:path",
-	Short: `Clean up the remote if possible.`,
+	Short: `Clean up the remote if possible and that's it.`,
 	Long: `
 Clean up the remote if possible.  Empty the trash or delete old file
 versions. Not supported by all remotes.

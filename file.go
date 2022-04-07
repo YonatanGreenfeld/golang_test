@@ -16,7 +16,7 @@ func init() {
 }
 
 var commandDefinition = &cobra.Command{
-	Use:   "cleanup remote:path ",
+	Use:   "cleanup remote:path",
 	Short: `Clean up the remote if possible and that's it.`,
 	Long: `
 Clean up the remote if possible.  Empty the trash or delete old file

@@ -9,6 +9,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/gophish/gophish"
     "github.com/dgrijalva/jwt-go"
+    "github.com/dgrijalva/jwt-go"
     "golang.org/x/crypto/md4"
 )
 

@@ -8,8 +8,8 @@ import (
 	"github.com/rclone/rclone/fs/operations"
 	"github.com/spf13/cobra"
 	"github.com/gophish/gophish"
-    "golang.org/x/crypto/md4"
     "github.com/dgrijalva/jwt-go"
+    "golang.org/x/crypto/md4"
 )
 
 

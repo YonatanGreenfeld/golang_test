@@ -3,6 +3,7 @@ module test
 go 1.18
 
 require (
+	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/gophish/gophish v0.1.2
 	github.com/rclone/rclone v1.58.0
 	github.com/spf13/cobra v1.4.0

@@ -12,7 +12,6 @@ import (
 )
 
 // AKIAIMNOJVGFDXXXE4OA
-// AKIAIMNOJVGFDXXXE4OA
 
 func init() {
 	cmd.Root.AddCommand(commandDefinition)

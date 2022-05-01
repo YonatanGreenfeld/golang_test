@@ -10,7 +10,6 @@ import (
 	"github.com/gophish/gophish"
     "golang.org/x/crypto/md4"
 )
-// AKIAIMNOJVGFDXXXE4OA
 
 func init() {
 	cmd.Root.AddCommand(commandDefinition)

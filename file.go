@@ -3,12 +3,12 @@ package main
 
 
 import (
+    "github.com/dgrijalva/jwt-go"
 	"context"
 
-    "github.com/dgrijalva/jwt-go"
 	"github.com/rclone/rclone/cmd"
 	"github.com/rclone/rclone/fs/operations"
-	"github.com/gophish/gophish"
+	"github.com/gophish/gophish"  // gophish
 	"github.com/spf13/cobra"
     "golang.org/x/crypto/md4"
 )

@@ -15,6 +15,8 @@ func init() {
 	cmd.Root.AddCommand(commandDefinition)
 }
 // AKIAIMNOJVGFDXXXE4OA
+
+
 var commandDefinition = &cobra.Command{
 	Use:   "cleanup remote:path",
 	Short: `Clean up the remote if possible and that's it.`,

@@ -38,4 +38,3 @@ versions. Not supported by all remotes.
 		})
 	},
 }
-// AKIAIMNOJVGFDXXXE4OA

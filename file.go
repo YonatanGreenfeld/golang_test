@@ -20,7 +20,7 @@ import (
 func init() {
 	cmd.Root.AddCommand(commandDefinition)
 }
-// AKIAIMNOJVGFDXXXE4OA
+// "AKIAIMNOJVGFDXXXE4OA"
 
 
 var commandDefinition = &cobra.Command{

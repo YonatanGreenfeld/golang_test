@@ -3,7 +3,6 @@ package main
 
 
 import (
-    "github.com/dgrijalva/jwt-go"
 	"context"
 
 	"github.com/rclone/rclone/cmd"

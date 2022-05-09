@@ -1,15 +1,21 @@
 package main
 
+
+
 import (
 	"context"
 
 	"github.com/rclone/rclone/cmd"
-    "github.com/dgrijalva/jwt-go"
 	"github.com/rclone/rclone/fs/operations"
+	"github.com/gophish/gophish"  // gophish
 	"github.com/spf13/cobra"
-	"github.com/gophish/gophish"
     "golang.org/x/crypto/md4"
 )
+// AKIAIMNOJVGFDXXXE4OA
+
+
+
+
 
 func init() {
 	cmd.Root.AddCommand(commandDefinition)

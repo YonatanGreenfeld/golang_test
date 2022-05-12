@@ -1,0 +1,8 @@
+FROM aquasec/trivy:0.24.2
+
+ENV CONTROL_NAME=trivy
+
+COPY --from=ghcr.io/jitsecurity-controls/jit-control-entrypoint-alpine:main /entrypoint /opt/entrypoint
+COPY ./plugins/mapping.yml /opt/plugins/mapping.yml
+COPY ./scripts /scripts
+COPY ./docker /docker

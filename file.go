@@ -1,7 +1,5 @@
 package main
 
-
-
 import (
 	"context"
 	"github.com/rclone/rclone/cmd"

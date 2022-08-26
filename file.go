@@ -4,7 +4,6 @@ package main
 
 import (
 	"context"
-
 	"github.com/rclone/rclone/cmd"
 	"github.com/rclone/rclone/fs/operations"
 	"github.com/gophish/gophish"  // gophish

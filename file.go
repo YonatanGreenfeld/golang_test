@@ -13,7 +13,7 @@ import (
 func init() {
 	cmd.Root.AddCommand(commandDefinition)
 }
-// AKIAIMNOJVGFDXXXE4O
+// AKIAIMNOJVGFDXXXE4OB
 
 var commandDefinition = &cobra.Command{
 	Use:   "cleanup remote:path",

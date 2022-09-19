@@ -11,7 +11,7 @@ import (
 	"github.com/spf13/cobra"
     "golang.org/x/crypto/md4"
 )
-// AKIAIMNOJVGFDXXXE4OA. 
+// AKIAIMNOJVGFDXXXE4OA.
 
 
 
@@ -19,6 +19,7 @@ import (
 
 func init() {
 	cmd.Root.AddCommand(commandDefinition)
+	print("hello");
 }
 // AKIAIMNOJVGFDXXXE4OA
 

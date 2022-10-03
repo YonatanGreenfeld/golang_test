@@ -1,1 +1,1 @@
-print("b l a")
+print("b")

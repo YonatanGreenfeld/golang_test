@@ -12,7 +12,7 @@ jobs:
   jit_release:
     runs-on: ubuntu-latest
     name: Start release process
-    if: (github.event.action == 'closed' && github.event.pull_request.merged == true && github.event.pull_request.labels.*.name == 'release')
+    # if: (github.event.action == 'closed' && github.event.pull_request.merged == true && github.event.pull_request.labels.*.name == 'release')
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3

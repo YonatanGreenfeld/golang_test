@@ -30,7 +30,7 @@ jobs:
           
       - name: Get release body from changelog to file
         run: |
-          echo $(sed -n "/## \[v0.0.3\]/,/^## \[/p" CHANGELOG.md | sed -e '$d') >> /tmp/release-body.md
+          sed -n "/## \[v0.0.3\]/,/^## \[/p" CHANGELOG.md | sed -e '$d' >> /tmp/release-body.md
       - name: Create release
         uses: ncipollo/release-action@v1.11.1
         id: create_release

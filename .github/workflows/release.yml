@@ -30,6 +30,9 @@ jobs:
           echo "RELAESE_BODY<<EOF" >> $GITHUB_OUTPUT
           echo $(sed -n "/## \[v0.0.3\]/,/^## \[/p" CHANGELOG.md | sed -e '$d') >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
+      - name: Echo output
+        run: |
+          echo $GITHUB_OUTPUT
       - name: Create release
         uses: ncipollo/release-action@v1.11.1
         id: create_release

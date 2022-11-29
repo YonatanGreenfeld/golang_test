@@ -1,0 +1,35 @@
+
+
+name: jit-release
+
+on:
+  pull_request:
+    branches:
+      - main
+    types: [closed]
+
+jobs:
+  jit_release:
+    runs-on: ubuntu-latest
+    name: Start release process
+    if: (!(github.event.action == 'closed' && github.event.pull_request.merged != true && github.event.pull_request.labels.*.name == 'release'))
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: echo event
+        run: |
+          echo ${{ github.event }}
+      - name: Get version
+        id: version
+        run: |
+          echo "VERSION=0.0.2" >> $GITHUB_OUTPUT
+      - name: Create release
+        uses: ncipollo/release-action@v1.11.1
+        id: create_release
+        with:
+          name: Release ${{ steps.version.outputs.version }}
+          tag: v${{ steps.version.outputs.version }}
+          body: release!
+          token: ${{ github.token }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

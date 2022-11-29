@@ -27,16 +27,17 @@ jobs:
           echo "RELAESE_BODY<<EOF" >> $GITHUB_OUTPUT
           echo $(sed -n "/## \[v0.0.3\]/,/^## \[/p" CHANGELOG.md | sed -e '$d') >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
-      - name: Echo output
+          
+      - name: Get release body from changelog to file
         run: |
-          cat $(echo $GITHUB_OUTPUT)
+          echo $(sed -n "/## \[v0.0.3\]/,/^## \[/p" CHANGELOG.md | sed -e '$d') >> /tmp/release-body.md
       - name: Create release
         uses: ncipollo/release-action@v1.11.1
         id: create_release
         with:
           name: Release ${{ steps.version.outputs.version }}
           tag: v${{ steps.version.outputs.version }}
-          body: ${{ steps.release_body.outputs.RELEASE_BODY }}
+          bodyFile: /tmp/release-body.md
           token: ${{ github.token }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -35,7 +35,7 @@ jobs:
       - name: update version in package.json
         id: bump_version
         run: |
-          VERSION=$(npm version ${{ github.event.inputs.bump }} --no-git-tag-version) >> $GITHUB_OUTPUT
+          echo "VERSION=$(npm version ${{ github.event.inputs.bump }} --no-git-tag-version)" >> $GITHUB_OUTPUT
 
       - name: update version in changelog.md
         run: |

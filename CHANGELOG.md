@@ -7,6 +7,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [Unreleased]
 
 
+## [v1.1.0-0] - 2022-12-06
+
+
 ## [v0.0.3] - 2022-11-29
 
 - Support authentication
